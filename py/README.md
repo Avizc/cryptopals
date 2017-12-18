@@ -16,7 +16,8 @@ I am currently on Challenge: 1
 7. [AES in ECB mode](https://cryptopals.com/sets/1/challenges/7)
 8. [Detect AES in ECB mode](https://cryptopals.com/sets/1/challenges/8)
 
-[**Set 2: Block Crypto**](https://cryptopals.com/sets/2) 
+[**Set 2: Block Crypto**](https://cryptopals.com/sets/2)
+
 9. [Implement PKCS#7 padding](https://cryptopals.com/sets/2/challenges/9)
 10. [Implement CBC mode](https://cryptopals.com/sets/2/challenges/10)
 11. [An ECB/CBC detection oracle](https://cryptopals.com/sets/2/challenges/11)
@@ -27,8 +28,13 @@ I am currently on Challenge: 1
 16. [CBC bitflipping attacks](https://cryptopals.com/sets/2/challenges/16)
 
 [**Set 3: Block and Stream Crypto**](https://cryptopals.com/sets/3)
+
 [**Set 4: Stream Crypto and Randomness**](https://cryptopals.com/sets/4)
+
 [**Set 5: Diffie-Hellman and Friends**](https://cryptopals.com/sets/5)
+
 [**Set 6: RSA and DSA**](https://cryptopals.com/sets/6)
+
 [**Set 7: Hashes**](https://cryptopals.com/sets/7)
+
 [**Set 8: Abstract Algebra**](https://cryptopals.com/sets/8)
