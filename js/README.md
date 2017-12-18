@@ -4,7 +4,7 @@ Thought it'd be cute to do the challenges in JavaScript, too!
 
 I am currently on Challenge: 1
 
-### Challenge Progress in JavaScript
+## Challenge Progress in JavaScript
 
 [**Set 1: Basics**](https://cryptopals.com/sets/1) **[IN-PROGRESS SET]**
 1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1)

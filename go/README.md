@@ -4,7 +4,7 @@ This is my first time writing in Go! I'm using the challenges to learn Go, resou
 
 I am currently on Challenge: 1
 
-### Challenge Progress in Go
+## Challenge Progress in Go
 
 [**Set 1: Basics**](https://cryptopals.com/sets/1) **[IN-PROGRESS SET]**
 1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1)
@@ -39,7 +39,7 @@ I am currently on Challenge: 1
 
 [**Set 8: Abstract Algebra**](https://cryptopals.com/sets/8)
 
-### Resources
+## Resources
 
 [A Tour of Go](https://tour.golang.org/welcome/1)
 

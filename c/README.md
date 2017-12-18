@@ -4,7 +4,7 @@ I'm doing this in C mostly so I can play around with Assembly after.
 
 I am currently on Challenge: 1
 
-### Challenge Progress in C
+## Challenge Progress in C
 
 [**Set 1: Basics**](https://cryptopals.com/sets/1) **[IN-PROGRESS SET]**
 1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1)

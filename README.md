@@ -17,7 +17,7 @@ Oh golly hi! These are my solutions and work on the [Cryptopals Crypto Challenge
 └── README.md           # What you're currently reading!
 ```
 
-### Challenges
+## Challenges
 
 I've hyperlinked sets 1-2 with their challenges, sets 3-8 I'll repeat the same for once I get there. Language(s) completed in will be written in bold inside brackets next to them.
 
