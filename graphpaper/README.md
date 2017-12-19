@@ -22,4 +22,4 @@ I haven't really moved on past this mostly because I ended up having no real spa
 
 ![Single-byte XOR cipher](./images/5.jpg)
 
-![Continuing the single-byte XOR cipher challenge](/images/6.jpg)
+![Continuing the single-byte XOR cipher challenge](./images/6.jpg)
