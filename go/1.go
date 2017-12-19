@@ -1,4 +1,4 @@
-// ------------------------------------- 
+//
 // Challenge 1 - Convert hex to base64
 // The following string:
 // "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
@@ -6,15 +6,15 @@
 // "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t"
 // Cryptopals Rule
 // Always operate on raw bytes, never on encoded strings. Only use hex and base64 for pretty-printing.
-// -------------------------------------
+//
 package main
 // Yay! Clean import of packages makes me happy.
 // Packages: https://golang.org/pkg/
 import(
 	"fmt"
 	"log"
-    "encoding/hex" // https://golang.org/pkg/encoding/hex/#DecodeString
-    "encoding/base64" // https://golang.org/pkg/encoding/base64/
+	"encoding/hex" // https://golang.org/pkg/encoding/hex/#DecodeString
+	"encoding/base64" // https://golang.org/pkg/encoding/base64/
 )
 // This is my first function in Go huzzah!
 // func helloWorld(x string,y string,z string)string{
