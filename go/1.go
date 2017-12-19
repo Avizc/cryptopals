@@ -1,7 +1,7 @@
 // ------------------------------------- 
 // Challenge 1 - Convert hex to base64
 // The following string:
-// "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d75"
+// "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
 // Should convert to:
 // "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t"
 // Cryptopals Rule
@@ -22,12 +22,13 @@ import(
 // }
 // Put any string you want here!
 const s="49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
+// This is what we're checking against
 const checkAgainstMe="SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t"
 // Print out all the things here.
 func main(){
 	// fmt.Println("I love rabbits, cheesecake, and cute things!")
 	// fmt.Println(helloWorld("rabbits", "cheesecake", "cute things"))
-	decodedHex, err:=hex.DecodeString(s)
+	decodedHex,err:=hex.DecodeString(s)
 	if err!=nil{
 		log.Fatal(err)
 	}
