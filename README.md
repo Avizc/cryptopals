@@ -5,8 +5,8 @@ Oh golly hi! These are my solutions and work on the [Cryptopals Crypto Challenge
 ```
 ├── c                   # Solutions in C
 ├── go                  # Solutions in Go
-│   ├── 1.go             # Solution #1 file in Go
-│   ├── 2.go             # Solution #2 file in Go
+│   ├── 1.go            # Solution #1 file in Go
+│   ├── 2.go            # Solution #2 file in Go
 │   ├── ...             # Solution #{i} file in Go
 │   ├── README.md       # List of which challenges are completed, notes, etc.
 ├── graphpaper          # Photos/scans of my journal with notes for the challenges
