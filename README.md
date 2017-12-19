@@ -5,8 +5,8 @@ Oh golly hi! These are my solutions and work on the [Cryptopals Crypto Challenge
 ```
 ├── c                   # Solutions in C
 ├── go                  # Solutions in Go
-│   ├──1.go             # Solution #1 file in Go
-│   ├──2.go             # Solution #2 file in Go
+│   ├── 1.go             # Solution #1 file in Go
+│   ├── 2.go             # Solution #2 file in Go
 │   ├── ...             # Solution #{i} file in Go
 │   ├── README.md       # List of which challenges are completed, notes, etc.
 ├── graphpaper          # Photos/scans of my journal with notes for the challenges
@@ -22,7 +22,7 @@ Oh golly hi! These are my solutions and work on the [Cryptopals Crypto Challenge
 I've hyperlinked sets 1-2 with their challenges, sets 3-8 I'll repeat the same for once I get there. Language(s) completed in will be written in bold inside brackets next to them.
 
 [**Set 1: Basics**](https://cryptopals.com/sets/1) **[IN-PROGRESS SET]**
-1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1)
+1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1) **[Go]**
 2. [Fixed XOR](https://cryptopals.com/sets/1/challenges/2)
 3. [Single-byte XOR cipher](https://cryptopals.com/sets/1/challenges/3)
 4. [Detect single-character XOR](https://cryptopals.com/sets/1/challenges/4)
