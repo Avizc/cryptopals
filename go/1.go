@@ -16,7 +16,7 @@ import (
 	"encoding/hex"    // https://golang.org/pkg/encoding/hex/#DecodeString
 	"fmt"
 	"log"
-	// "reflect" // https://golang.org/pkg/reflect/#TypeOf
+	"reflect" // https://golang.org/pkg/reflect/#TypeOf
 )
 
 // This is my first function in Go huzzah!
@@ -38,8 +38,16 @@ func main() {
 	}
 	fmt.Printf("This is the decodedHex in symbol: %s", decodedHex)
 	fmt.Println("\nThis is decodedHex in decimal: ", decodedHex)
+	fmt.Println("\nThis is the decodedHex typeOf here: ", reflect.TypeOf(decodedHex))
+
 	encodedBase64 := base64.StdEncoding.EncodeToString([]byte(decodedHex))
 	fmt.Println("\nThis is the encodedBase64 of decodedHex: ", encodedBase64)
+	fmt.Println("\nThis is the encodedBase64 typeOf here: ", reflect.TypeOf(encodedBase64))
+
+	byteEncodedBase64 := []byte(encodedBase64)
+	fmt.Println("\nSee if byteEncodedBase64 works? Here: ", byteEncodedBase64)
+	fmt.Println("\nCheck out the typeOf for byteEncodedBase64: ", reflect.TypeOf(byteEncodedBase64))
+
 	decodedBase64, err := base64.StdEncoding.DecodeString(checkAgainstMe)
 	if err != nil {
 		fmt.Println("Decode error: ", err)
@@ -47,10 +55,12 @@ func main() {
 	}
 	fmt.Printf("\nThis is checkAgainstMe base64 decoded in symbol: %s", decodedBase64)
 	fmt.Println("\nThis is checkAgainstMe base64 decoded in decimal: ", decodedBase64)
+	fmt.Println("\nThis is the decodedBase64 typeOf here: ", reflect.TypeOf(decodedBase64))
+
 	// Uh oh I really broke this thing now sleep deprived oops. Check out the typeof in the morning!
-	// if encodedBase64 == decodedBase64 {
-	// 	fmt.Println("\nSuccess! Your variable encodedBase64 is equal to decodedBase64.")
-	// } else { // Apparently else if/else has to be on the same line as the closing brace? Weird.
-	// 	fmt.Println("\nUh oh something has gone wrong, try this again?")
-	// }
+	if byteEncodedBase64 == nil {
+		fmt.Println("\nSuccess! Your variable encodedBase64 is equal to decodedBase64.")
+	} else { // Apparently else if/else has to be on the same line as the closing brace? Weird.
+		fmt.Println("\nUh oh something has gone wrong, try this again?")
+	}
 }
