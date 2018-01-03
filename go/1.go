@@ -68,11 +68,14 @@ func main() {
 	// Result: []uint8
 
 	// I need to figure out why this is broken!
-	if byteEncodedBase64 == decodedBase64 {
-		fmt.Println("\nSuccess! Your variable encodedBase64 is equal to decodedBase64.")
-	} else { // Apparently else if/else has to be on the same line as the closing brace? Weird.
-		fmt.Println("\nUh oh something has gone wrong, try this again?")
-	}
+	// if byteEncodedBase64 == decodedBase64 {
+	// 	fmt.Println("\nSuccess! Your variable encodedBase64 is equal to decodedBase64.")
+	// } else { // Apparently else if/else has to be on the same line as the closing brace? Weird.
+	// 	fmt.Println("\nUh oh something has gone wrong, try this again?")
+	// }
 	// Currenty result of this conditional is:
 	// ./1.go:71: invalid operation: byteEncodedBase64 == decodedBase64 (slice can only be compared to nil)
+
+	// Checking if two slices are equal is a package apparently?
+	fmt.Println("\nIf this returns 'false' huzzah yay success (until I figure out why byteEncodedBase64 is wrong)!",reflect.DeepEqual(byteEncodedBase64,decodedBase64))
 }
