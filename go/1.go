@@ -77,5 +77,5 @@ func main() {
 	// ./1.go:71: invalid operation: byteEncodedBase64 == decodedBase64 (slice can only be compared to nil)
 
 	// Checking if two slices are equal is a package apparently?
-	fmt.Println("\nIf this returns 'false' huzzah yay success (until I figure out why byteEncodedBase64 is wrong)!",reflect.DeepEqual(byteEncodedBase64,decodedBase64))
+	fmt.Println("\nIf this returns 'false' huzzah yay success (until I figure out why byteEncodedBase64 is wrong)!", reflect.DeepEqual(byteEncodedBase64, decodedBase64))
 }
