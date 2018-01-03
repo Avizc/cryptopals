@@ -79,5 +79,5 @@ func main() {
 
 	// Checking if two slices are equal is a package apparently?
 	fmt.Println("\nIf this returns 'false' huzzah yay success (until I figure out why byteEncodedBase64 is wrong)!", reflect.DeepEqual(byteEncodedBase64, decodedBase64))
-	fmt.Println("\nWait I think I only need to see if decodedHex and decodedBase64 are equal... if this is 'true' whoo success!",reflect.DeepEqual(decodedHex,decodedBase64))
+	fmt.Println("\nWait I think I only need to see if decodedHex and decodedBase64 are equal... if this is 'true' whoo success!", reflect.DeepEqual(decodedHex, decodedBase64))
 }
