@@ -8,7 +8,7 @@
 // ...should produce:
 // "746865206b696420646f6e277420706c6179"
 //
-package main
+package rabbit_hole_02
 import(
 	"fmt"
 	// "log"
@@ -21,7 +21,7 @@ const whiteRabbit="686974207468652062756c6c277320657965"
 // Test string wonderland to check if alice and whiteRabbit have been XOR'd properly
 const wonderland="746865206b696420646f6e277420706c6179"
 // Print out all the things here!
-func main(){
+func Test2(){
 	fmt.Println("This should print alice: ",alice)
 	fmt.Println("This should print whiteRabbit: ",whiteRabbit)
 }
