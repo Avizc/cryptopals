@@ -9,15 +9,35 @@
 */
 package rabbit_hole_01
 
-/* 
-	Re-doing this challenge, avoid imports as much as possible especially anything from Reflect! ✨ 
-	Previous first attempt at this challenge can now be found in rabbit_hole_01_old/0.go	
+/*
+	Re-doing this challenge, avoid imports as much as possible especially anything from Reflect! ✨
+	Previous first attempt at this challenge can now be found in rabbit_hole_01_old/0.go
 */
 
 import (
 	"fmt"
 )
 
-func Test(){
+func Test() {
 	fmt.Println("I love rabbits, cheesecake, and cute things!")
+}
+
+func HexToByte(hexCookies string) []byte {
+
+}
+
+func ByteToHex(byteCookies []byte) string {
+
+}
+
+func BaseSixtyFourToByte(baseMacarons string) []byte {
+
+}
+
+func ByteToBaseSixtyFour(byteMacarons []byte) string {
+
+}
+
+func HexToBaseSixtyFour(hexCake string) string {
+
 }
