@@ -22,22 +22,24 @@ func Test() {
 	fmt.Println("I love rabbits, cheesecake, and cute things!")
 }
 
-func HexToByte(hexCookies string) []byte {
-
+func HexToByte(hexCookies string) ([]byte, error) {
+	fmt.Println("This is the original hex string: ", hexCookies)
+	newCookies, err := []byte(hexCookies)
+	fmt.Println("String should now be byte encoded as ASCII: ", newCookies)
 }
 
-func ByteToHex(byteCookies []byte) string {
+// func ByteToHex(byteCookies []byte) string {
 
-}
+// }
 
-func BaseSixtyFourToByte(baseMacarons string) []byte {
+// func BaseSixtyFourToByte(baseMacarons string) []byte {
 
-}
+// }
 
-func ByteToBaseSixtyFour(byteMacarons []byte) string {
+// func ByteToBaseSixtyFour(byteMacarons []byte) string {
 
-}
+// }
 
-func HexToBaseSixtyFour(hexCake string) string {
+// func HexToBaseSixtyFour(hexCake string) string {
 
-}
+// }
