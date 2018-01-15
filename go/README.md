@@ -2,12 +2,12 @@ s# Go
 
 This is my first time writing in Go! I'm using the challenges to learn Go, resources listed at the bottom.
 
-I am currently on Challenge: 2
+I am currently on Challenge: 1
 
 ## Challenge Progress in Go
 
 [**Set 1: Basics**](https://cryptopals.com/sets/1) **[IN-PROGRESS SET]**
-1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1) **[Completed]**
+1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1) **[[In-progress]](https://github.com/Avizc/cryptopals/tree/master/go/rabbit_hole_01)** *[[Completed - First attempt "works" but re-doing properly]](https://github.com/Avizc/cryptopals/tree/master/go/rabbit_hole_01_old)*
 2. [Fixed XOR](https://cryptopals.com/sets/1/challenges/2)
 3. [Single-byte XOR cipher](https://cryptopals.com/sets/1/challenges/3)
 4. [Detect single-character XOR](https://cryptopals.com/sets/1/challenges/4)
@@ -43,8 +43,4 @@ I am currently on Challenge: 2
 
 [A Tour of Go](https://tour.golang.org/welcome/1)
 
-<<<<<<< HEAD
 [Go Packages documentation](https://golang.org/pkg/)
-=======
-[Go Packages documentation](https://golang.org/pkg/)
->>>>>>> 3d67ab5... Initial Challenge 1 work and repo organising.
