@@ -3,18 +3,22 @@
 Oh golly hi! These are my solutions and work on the [Cryptopals Crypto Challenges](https://cryptopals.com/) in C, Go (Golang), JavaScript, Python, Ruby. Eventually I'll settle on finishing it in one language then go back. Here's an example of my current set up:
 
 ```
-├── c                   # Solutions in C
-├── go                  # Solutions in Go
-│   ├── 1.go            # Solution #1 file in Go
-│   ├── 2.go            # Solution #2 file in Go
-│   ├── ...             # Solution #{i} file in Go
-│   ├── README.md       # List of which challenges are completed, notes, etc.
-├── graphpaper          # Photos/scans of my journal with notes for the challenges
-├── js                  # Solutions in JavaScript
-├── py                  # Solutions in Python
-├── rb                  # Solutions in Ruby
+├── c                              # Solutions in C
+├── go                             # Solutions in Go
+│   ├── rabbit_hole_01
+│   │   ├── 1.go                   # Solution #1 in Go
+│   ├── rabbit_hole_02
+│   │   ├── 2.go                   # Solution #2 in Go
+│   ├── rabbit_hole_0i
+│   │   ├── {i}.go                 # Solution #{i} in Go
+│   ├── cryptopals_wonderland.go   # Run all packages from solutions here
+│   ├── README.md                  # List of which challenges are completed, notes, etc.
+├── graphpaper                     # Photos/scans of my journal with notes for the challenges
+├── js                             # Solutions in JavaScript
+├── py                             # Solutions in Python
+├── rb                             # Solutions in Ruby
 ├── LICENSE
-└── README.md           # What you're currently reading!
+└── README.md                      # What you're currently reading!
 ```
 
 ## Challenges
@@ -22,7 +26,7 @@ Oh golly hi! These are my solutions and work on the [Cryptopals Crypto Challenge
 I've hyperlinked sets 1-2 with their challenges, sets 3-8 I'll repeat the same for once I get there. Language(s) completed in will be written in bold inside brackets next to them.
 
 [**Set 1: Basics**](https://cryptopals.com/sets/1) **[IN-PROGRESS SET]**
-1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1) **[Go]**
+1. [Convert hex to base64](https://cryptopals.com/sets/1/challenges/1) **[[Go]](https://github.com/Avizc/cryptopals/tree/master/go)**
 2. [Fixed XOR](https://cryptopals.com/sets/1/challenges/2)
 3. [Single-byte XOR cipher](https://cryptopals.com/sets/1/challenges/3)
 4. [Detect single-character XOR](https://cryptopals.com/sets/1/challenges/4)
