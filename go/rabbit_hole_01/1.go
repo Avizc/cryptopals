@@ -26,6 +26,7 @@ func HexToByte(hexCookies string) []byte {
 	newCookies := []byte(hexCookies)
 	fmt.Println("This is the original hex string: ", hexCookies)
 	fmt.Println("String should now be byte encoded as ASCII: ", newCookies)
+	return newCookies
 }
 
 // func ByteToHex(byteCookies []byte) string {
