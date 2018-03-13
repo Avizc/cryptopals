@@ -19,7 +19,10 @@ import (
 )
 
 func Test() {
-	fmt.Println("I love rabbits, cheesecake, and cute things!")
+	// fmt.Println("I love rabbits, cheesecake, and cute things!")
+	var firstChar uint8 = 0x42
+	fmt.Println("Following should be 01000010")
+	fmt.Println("%08b\n", firstChar)
 }
 
 func HexToByte(hexCookies string) []byte {
