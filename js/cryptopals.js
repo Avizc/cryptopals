@@ -51,6 +51,41 @@ const byteToBase64 = (byte) => {
 // => 'aGVsbG8='
 
 const base64ToByte = (base64) => {
-    const base64Table = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-
+  const key = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+  let newBytes = []
+  let currentChar = 0
+  let currentByte = 0
+  for (let i=0; i<base64.length; i++) {     // Go over four 6-bit base64 chars to decode into three 8-bit bytes
+    currentChar = key.indexOf(base64[i])
+    if (i%4===0) { // First base64 char
+      currentByte = (currentChar << 2)      // Get the 6-bits from first base64 char
+    }
+    if (i%4===1) { // Second base64 char
+      currentByte += (currentChar >> 6)     // Concat the first 2-bits from second base64 char
+      newBytes.push(currentByte)            // Push the first byte
+      currentByte = (currentChar & 15) << 4 // Erase bits before last 4-bits, add last 4-bits for second byte
+    }
+    if (i%4===2) { // Third base64 char
+      currentByte += (currentChar >> 2)     // Concat first 4-bits from third base64 char for second byte
+      newBytes.push(currentByte)            // Push second byte
+      currentByte = (currentChar & 3) << 6  // Erase bits before last 2-bits, add last 2-bits for third byte
+    }
+    if (i%4===3) { // Fourth base64 char
+      currentByte += (currentChar)          // Concat fourth base64 char for third byte
+      newBytes.push(currentByte)            // Push third byte
+    }
+  }
+  if (newBytes[newBytes.length-1] === -1) { // Remove single padding from the end (=)
+    newBytes.pop()
+  }
+  if (newBytes[newBytes.length-2] === -1) { // Remove double padding from the end (==)
+    // newBytes.splice(newBytes.length-2, 2)
+    newBytes.pop()
+    newBytes.pop()
+  }
+  return new Uint8Array(newBytes)
 }
+// base64ToByte('aGVsbG8=')
+// hell   => 104 101 108 108         => aGVsbA==
+// hello  => 104 101 108 108 111     => aGVsbG8=
+// hellos => 104 101 108 108 111 115 => aGVsbG9z
