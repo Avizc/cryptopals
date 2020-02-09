@@ -151,7 +151,41 @@ const hexFixedXOR = (hex1, hex2) => {
   }
   return byteToHex(newXORdBytes)
 }
-// const hex1 = '1c0111001f010100061a024b53535009181c'
-// const hex2 = '686974207468652062756c6c277320657965'
-// hexFixedXOR(hex1, hex2)
+// const hexFixedXOR1 = '1c0111001f010100061a024b53535009181c'
+// const hexFixedXOR2 = '686974207468652062756c6c277320657965'
+// hexFixedXOR(hexFixedXOR1, hexFixedXOR2)
 // => '746865206b696420646f6e277420706c6179'
+
+/*
+  Set 1: Challenge 3 - Single-byte XOR cipher
+
+  This: 1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736
+  Has been XOR'd against a single char. Find the key, decrypt the message.
+
+  Also: "ETAOIN SHRDLU"
+*/
+
+const etaoin = { // Percentage frequency of char in English language
+  "e": 12.702,
+  "t": 9.356,
+  "a": 8.167,
+  "o": 7.507,
+  "i": 6.966,
+  "n": 6.749,
+  "s": 6.327,
+  "h": 6.094,
+  "r": 5.987,
+  "d": 4.253,
+  "l": 4.025,
+  "u": 2.758,
+}
+
+const hexSingleByteXOR = (hex) => {
+  let decodedHex = hexToByte(hex)
+  for (let i=0; i<255; i++) {
+
+  }
+}
+const hexSingleByteXOR1 = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
+hexSingleByteXOR(hexSingleByteXOR1)
+// => ''
