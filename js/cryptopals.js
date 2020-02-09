@@ -1,11 +1,9 @@
 /*
-    Convert hex to base64
+  Set 1: Challenge 1 - Convert hex to base64
 
-    This: 49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d
-
-    Should produce: SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t
-
-    Note: Always operate on raw bytes, never on encoded strings. Only use hex and base64 for pretty
+  This: 49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d
+  Should produce: SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t
+  Note: Always operate on raw bytes, never on encoded strings. Only use hex and base64 for pretty
 */
 
 const hexToByte = (hex) => {
@@ -128,3 +126,32 @@ const base64ToHex = (base64) => {
 }
 // base64ToHex('SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t')
 // => '49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d'
+
+/*
+  Set 1: Challenge 2 - Fixed XOR
+
+  This: 1c0111001f010100061a024b53535009181c
+  After hex decoding and XOR'd against: 686974207468652062756c6c277320657965
+  Should produce: 746865206b696420646f6e277420706c6179
+*/
+
+const hexFixedXOR = (hex1, hex2) => {
+  let decodedHex1 = hexToByte(hex1)
+  let decodedHex2 = hexToByte(hex2)
+  let fixedLength = 0
+  let currentByte = 0
+  let newXORdBytes = []
+  if (decodedHex1.length === decodedHex2.length) { // Check if hex strings are of equal length, return error otherwise
+    fixedLength = decodedHex1.length
+  }
+  else return "ERROR: Your values do not have the same lengths. Please check and correct your inputs."
+  for (let i=0; i<fixedLength; i++) {              // Go over each hex1 and hex2 byte
+    currentByte = decodedHex1[i] ^ decodedHex2[i]  // XOR the hex1 and hex2 byte
+    newXORdBytes.push(currentByte)                 // Add XOR'd byte
+  }
+  return byteToHex(newXORdBytes)
+}
+// const hex1 = '1c0111001f010100061a024b53535009181c'
+// const hex2 = '686974207468652062756c6c277320657965'
+// hexFixedXOR(hex1, hex2)
+// => '746865206b696420646f6e277420706c6179'
