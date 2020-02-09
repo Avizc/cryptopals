@@ -8,13 +8,41 @@
     Note: Always operate on raw bytes, never on encoded strings. Only use hex and base64 for pretty
 */
 
-const hexToByte= (hex) => {
-
+const hexToByte = (hex) => {
+  const key = '0123456789abcdef'
+  let newBytes = []
+  let currentChar = 0
+  let currentByte = 0
+  for (let i=0; i<hex.length; i++) {   // Go over two 4-bit hex chars to convert into one 8-bit byte
+    currentChar = key.indexOf(hex[i])
+    if (i%2===0) { // First hex char
+      currentByte = (currentChar << 4) // Get 4-bits from first hex char
+    }
+    if (i%2===1) { // Second hex char
+      currentByte += (currentChar)     // Concat 4-bits from second hex char
+      newBytes.push(currentByte)       // Add byte
+    }
+  }
+  return new Uint8Array(newBytes)
 }
+// hexToByte('68656c6c6f')
+// => [104, 101, 108, 108, 111]
 
 const byteToHex = (byte) => {
-
+  const key = '0123456789abcdef'
+  let bytes = new Uint8Array(byte)
+  let newHex = ''
+  let currentChar = 0
+  for (let i=0; i<bytes.length; i++) { // Go over each 8-bit bytes
+    currentChar = (bytes[i] >> 4)      // First 4-bits for first hex char
+    newHex += key[currentChar]         // Add first hex char to string
+    currentChar = (bytes[i] & 15)      // Erase first 4-bits, get last 4-bits for second hex char
+    newHex += key[currentChar]         // Add second hex char to string
+  }
+  return newHex
 }
+// byteToHex([104,101,108,108,111])
+// => '68656c6c6f'
 
 const byteToBase64 = (byte) => {
     const key = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
@@ -79,7 +107,6 @@ const base64ToByte = (base64) => {
     newBytes.pop()
   }
   if (newBytes[newBytes.length-2] === -1) { // Remove double padding from the end (==)
-    // newBytes.splice(newBytes.length-2, 2)
     newBytes.pop()
     newBytes.pop()
   }
@@ -89,3 +116,15 @@ const base64ToByte = (base64) => {
 // hell   => 104 101 108 108         => aGVsbA==
 // hello  => 104 101 108 108 111     => aGVsbG8=
 // hellos => 104 101 108 108 111 115 => aGVsbG9z
+
+const hexToBase64 = (hex) => {
+  return byteToBase64(hexToByte(hex))
+}
+// hexToBase64('49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d')
+// => 'SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t'
+
+const base64ToHex = (base64) => {
+  return byteToHex(base64ToByte(base64))
+}
+// base64ToHex('SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t')
+// => '49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d'
